@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando's Portfolio</title>
+    <div class="links">
+        <link rel="icon" type="image/x-icon" href="assets/pfp.jpg">
+        <link rel="stylesheet" href="style.css">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans&display=swap" rel="stylesheet">
+        <!--This one for the hamburber menu-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#all").click(function () {
+                    $('.scenery').show();
+                    $('.objects').show();
+                    $('.others').show();
+                });
+
+                $("#scenery").click(function () {
+                    $('.others').hide();
+                    $('.objects').hide();
+                    $('.scenery').show();
+                });
+
+                $("#objects").click(function () {
+                    $('.others').hide();
+                    $('.scenery').hide();
+                    $('.objects').show();
+                });
+
+                $("#others").click(function () {
+                    $('.scenery').hide();
+                    $('.objects').hide();
+                    $('.others').show();
+                });
+            });
+
+            function onClick() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </div>
+</head>
+<header>
+    <h1> Orlando Jonathan Padiman</h1>
+    <h3> 2702337615 - L1BC</h3>
+</header>
+<hr />
+<div class="topnav" id="myTopnav"> <!--The Clickable Menu Buttons-->
+    <a href="index.html"> HOME </a>
+    <a href="about.html"> ABOUT ME </a>
+    <a href="education.html"> EDUCATION </a>
+    <a href="skills.html"> PROGRAMMING SKILLS </a>
+    <a href="socmed.html"> SOCIAL MEDIA </a>
+    <a class="active"> GALLERY </a>
+    <a href="javascript:void(0);" class="icon" onclick="onClick()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<body>
+    <div class="container">
+        <div class="container2">
+            <div class="gallery">
+                <h2>
+                    Photos I've Taken:
+                </h2><br>
+                <div class="button-container">
+                    <button class="button" id="scenery">
+                        <b>Scenery</b>
+                    </button>
+                    <button class="button" id="objects">
+                        <b>Objects</b>
+                    </button>
+                    <button class="button" id="others">
+                        <b>Others</b>
+                    </button>
+                    <button class="button" id="all">
+                        <b>Show All</b>
+                    </button>
+                </div>
+                <div class="image-container">
+                    <div class="scenery">
+                        <img src="assets/dufan_sky.jpg">
+                    </div>
+                    <div class="objects">
+                        <img src="assets/mannequin.jpg">
+                    </div>
+                    <div class="others">
+                        <img src="assets/cat.jpg">
+                    </div>
+                    <div class="objects">
+                        <img src="assets/ceiling.jpg">
+                    </div>
+                    <div class="scenery">
+                        <img src="assets/gandaria.jpg">
+                    </div>
+                    <div class="scenery">
+                        <img src="assets/dufan_building.jpg">
+                    </div>
+                    <div class="others">
+                        <img src="assets/another_cat.jpg">
+                    </div>
+                    <div class="objects">
+                        <img src="assets/fake_moon.jpg">
+                    </div>
+                </div>
+                <form action="about.html">
+                    <button type="submit" class="gallery-button">Back to About Me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

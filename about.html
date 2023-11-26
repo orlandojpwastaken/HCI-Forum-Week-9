@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando's Portfolio</title>
+    <div class="links">
+        <link rel="icon" type="image/x-icon" href="pfp.jpg">
+        <link rel="stylesheet" href="style.css">
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans&display=swap" rel="stylesheet">
+        <!--This one for the hamburber menu-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".toggle").click(function () {
+                    $(this).next(".hobby-content").slideToggle({});
+                    $(this).toggleClass("unclicked")
+                });
+                $('.hobby-content').hide()
+
+                $('.content').eq(1).hide();
+                $('.content').eq(2).hide();
+
+                function navigate(elementId) {
+                    $(elementId).click(function () {
+                        $('section').filter(elementId).show();
+                        $('section').not(elementId).hide();
+                    })
+                }
+                navigate('#music')
+                navigate('#guitar')
+                navigate('#photography')
+            });
+
+            function onClick() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </div>
+</head>
+<header>
+    <h1> Orlando Jonathan Padiman</h1>
+    <h3> 2702337615 - L1BC</h3>
+</header>
+<hr />
+<div class="topnav" id="myTopnav"> <!--The Clickable Menu Buttons-->
+    <a href="index.html"> HOME </a>
+    <a class="active"> ABOUT ME </a>
+    <a href="education.html"> EDUCATION </a>
+    <a href="skills.html"> PROGRAMMING SKILLS </a>
+    <a href="socmed.html"> SOCIAL MEDIA </a>
+    <a href="gallery.html"> GALLERY </a>
+    <a href="javascript:void(0);" class="icon" onclick="onClick()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<body>
+    <div class="row">
+
+        <div class="container">
+            <div class="container2">
+                <div class="about-me">
+                    <img src="assets/aboutme.png" alt="About Me" title="About Me" height="260px"
+                        style="float:right; padding:10px;">
+                    <h2>
+                        About Me:
+                    </h2><br>
+                    <p> Full Name: Orlando Jonathan Padiman<br><br>
+                        Gender:<input type="radio" disabled checked> Male <input type="radio" disabled>Female<br><br>
+                        Birthday: 5 April 2005 (Age: 18)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hobbies-interests">
+            <div class="toggle unclicked">
+                <h2>
+                    Hobbies
+                </h2>
+            </div>
+            <div class="hobby-content">
+                <div class="button-container">
+                    <button type="button" class="btn btn-dark" id="music">Listening to Music</button>
+                    <button type="button" class="btn btn-dark" id="guitar">Playing Guitar</button>
+                    <button type="button" class="btn btn-dark" id="photography">Photography</button>
+                </div>
+                <section id="music" class="content">
+                    <h1><u>Listening to Music:</u></h1>
+                    <p>
+                        I like listening to different types of music in my free time. I'm not particularly picky with
+                        the type of music I listen to so I guess I like any genre of music.
+                        <br>
+                        Here's a trophy from 2022's Spotify Wrapped and a tropy of proof
+                        that I am genuinely that passionate about listening to music :D
+                    </p>
+                    <br>
+                    <img src="assets/music_trophy.png">
+                </section>
+                <section id="guitar" class="content">
+                    <h1><u>Playing the Guitar:</u></h1>
+                    <p>
+                        I have been playing guitar since high school since I really enjoy not only listening to music,
+                        but playing it myself.
+                        <br>
+                        Since I have an interest in most genre of music, I play both the acoustic
+                        and electric guitar.
+                        <br>
+                        Here's a short snippet of one of my practice sessions where I 
+                        tried to play Yahya's song "keepyousafe"
+                        <br>
+                        <br>
+                        <video controls="controls" id="guitarVideo">
+                            <source src="assets/guitar.mp4" type="video/mp4">
+                        </video>
+                </section>
+                <section id="photography" class="content">
+                    <h1><u>Photography:</u></h1>
+                    <p>
+                        I've only recently picked this hobby up but I am starting to get into
+                        photography. I take pictures of anything that catches my eye. 
+                        <br>
+                        As of now, I have not learnt any of the more advanced photography
+                        techniques, so there's not much special in the pictures I take.
+                        <br>
+                        However,  some examples of what I can do with a camera are in my
+                        gallery which you can check from the button below!
+                        <br><br>
+                        <form action="gallery.html">
+                            <button type="submit" class="gallery-button">Gallery</button>
+                        </form>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
