@@ -53,31 +53,12 @@ hr {
     margin-bottom: 5px;
 }
 
-
+.introduction,
+.education,
 .about-me,
 .prog-skills {
     background-color: rgba(65, 65, 65, 0.68);
-    width: 40%;
-    border: 10px solid rgba(73, 72, 72, 0.562);
-    padding: 50px;
-    margin-bottom: 50px;
-    font-size: large;
-    transition: 0.25s ease-in-out;
-}
-
-.introduction {
-    background-color: rgba(65, 65, 65, 0.68);
     width: 60%;
-    border: 10px solid rgba(73, 72, 72, 0.562);
-    padding: 50px;
-    margin-bottom: 50px;
-    font-size: large;
-    transition: 0.25s ease-in-out;
-}
-
-.education {
-    background-color: rgba(65, 65, 65, 0.68);
-    width: 50%;
     border: 10px solid rgba(73, 72, 72, 0.562);
     padding: 50px;
     margin-bottom: 50px;
